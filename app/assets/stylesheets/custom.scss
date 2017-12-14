@@ -1,0 +1,202 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+  }
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+/* body */
+
+/* miscellaneous */
+$gray-medium-light: #eaeaea;
+
+/* hotel index */
+.hotels {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* room index */
+.rooms_photos {
+  width:65%;
+  display:block;
+  margin:auto;
+}
+
+/* sidebar */
+aside {
+  section.room_name {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+/* room_type photos */
+.photos {
+  display: inline-block;
+  margin: 15px 0px;
+}
+
+/* room_type text */
+.room_type {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+  }
+  .align_right {
+    display: block;
+    margin-top: 1.25em;
+    margin-bottom: 2em;
+    width:40%;
+    float: right;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 1.5em;
+  }
+}
+
+.display {
+  li {
+    margin-left: 3em;
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1.75em;
+  }
+}
+
+.links {
+  font-size: 2em;
+  text-align: center;
+}
+
+/* notices */
+.alert {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  width: auto;
+}
+
+/* error */
+#error_explanation {
+  border: 2px solid red;
+  background-color: #f00;
+  padding: 7px;
+  color: #fff;
+  h3 {
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+    font-size: 1.25em;
+  }
+}
+
+.field_with_errors input[type='text']{
+  border: 1px solid red;
+}
+
+.field_with_errors input[type='password']{
+  border: 1px solid red;
+}
+
+.field_with_errors input[type='date']{
+  border: 1px solid red;
+}
+
+.field_with_errors input[type='time']{
+  border: 1px solid red;
+}
+
+.field_with_errors input[type='number']{
+  border: 1px solid red;
+}
+
+/* header */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}

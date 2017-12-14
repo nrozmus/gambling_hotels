@@ -1,0 +1,46 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h3>
+      <%= @user.errors.count %> user
+      <%= 'error'.pluralize(@user.errors.count) %>
+       prohibited your information from being saved:
+    </h3>
+
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li>* <%= message %></li>
+      <% end %>
+    </ul>
+
+    <ul>
+      <% @user.addresses.each do |address| %>
+          <% if address.errors.present? %>
+            <h3>
+              <%= "#{address.errors.count} #{address.address_type} Address"%>
+              <%= 'error'.pluralize(address.errors.count) %>
+               prohibited your information from being saved:
+            </h3>
+          <% end %>
+
+        <% address.errors.full_messages.each do |message| %>
+          <li>* <%= message %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div>
+  <h2>Sign up</h2>
+</div>
+
+<%= form_for @user do |f| %>
+  <%= render 'form', f:f, user: @user, addresses: @addresses %>
+  <div class='actions'>
+    <%= f.submit 'Sign up', class: "btn btn-primary" %><br />
+  </div>
+<% end %>
+
+<br /><%= link_to 'Register with Github', '/auth/github' %><br />
+
+<br /><%= link_to 'Log in', login_path %>

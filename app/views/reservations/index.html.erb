@@ -1,0 +1,8 @@
+<div class="center">
+  <h1>Reservations</h1>
+</div>
+
+<div>
+  <%= render(@reservations) ||
+    content_tag(:h2, 'You have not made any reservations') %>
+</div>

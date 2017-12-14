@@ -1,0 +1,7 @@
+<div class>
+  <h1><%= @rooms.first.hotel.name %></h1>
+</div>
+
+<div class="row">
+  <%= render 'room_types/index', rooms: @rooms %>
+</div>

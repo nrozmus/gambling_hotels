@@ -1,0 +1,58 @@
+<% if current_user && @reservation.errors.any? %>
+  <div id="error_explanation">
+    <h3><%= pluralize(@reservation.errors.count, "error") %> prohibited your
+      reservation from being made:
+    </h3>
+
+    <ul>
+    <% @reservation.errors.full_messages.each do |message| %>
+      <li>* <%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="center">
+  <h1><%= @room_type.name %></h1>
+</div>
+
+<div class="row">
+  <aside class="col-md-4">
+    <div class="photos">
+      <%= image_tag(@room_type.photo , alt: @room_type.name,
+      size: "760x410") %>
+    </div>
+  </aside>
+
+  <div class="col-md-8">
+    <ol class="room_type">
+      <%= render @room_type, amenities: @amenities  %>
+    </ol>
+  </div>
+</div>
+
+<% if current_user && current_user.addresses.present? %>
+  <div class="center"><h2>Reserve this Room</h2></div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@reservation,
+        url: room_reservations_path(@reservation.room_id)) do |f| %>
+        <%= render 'reservations/form', f: f, reservation: @reservation %>
+         <%= f.hidden_field :room_type_id, value: @room_type.id %>
+      <% end %>
+    </div>
+  </div>
+<% elsif current_user && current_user.addresses.blank? %>
+  <div class="links">
+    <strong>
+      <%= link_to 'Click Here', new_address_path %> to add your Home Address
+    </strong>
+  </div>
+<% else %>
+  <div class="links">
+    <strong>
+      <%= link_to 'Register', new_user_path %> or
+      <%= link_to 'Log in',  login_path %> to make a Reservation
+    </strong>
+  </div>
+<% end %>
