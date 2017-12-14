@@ -109,7 +109,7 @@ room_list.each do |room|
 end
 
 setup_addresses = [
-  ['852 E Dr', '', 'Winchester', 'MN',	96541 'Home', 1],
+  ['852 E Dr', '', 'Winchester', 'MN',	96541, 'Home', 1],
   ['123 Orchard', 'apt 14', 'Montana','MN', 6612, 'Home', 2]
 ]
 
