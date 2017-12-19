@@ -1,8 +1,8 @@
 [X] Must render at least one index page (index resource - 'list of things') via jQuery and an Active Model Serialization JSON Backend.
   -Rooms#index uses jQuery to render the selected hotel rooms on the root page
 
-[] Must render at least one show page (show resource - 'one specific thing') via jQuery and an Active Model Serialization JSON Backend.
-
+[X] Must render at least one show page (show resource - 'one specific thing') via jQuery and an Active Model Serialization JSON Backend.
+  -Display a specific review on upon request on the reviews index page
 
 [X] The rails API must reveal at least one has-many relationship in the JSON that is then rendered to the page.
   -Home#index, hotel has many rooms
