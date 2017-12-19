@@ -124,3 +124,30 @@ setup_addresses.each do |address|
     user_id: address[6]
   )
 end
+
+startup_reviews = [
+  [7, 'This place is super comfy! the BEST', 2],
+  [7, "The price for this AMAZING room, is killer! If I didn't have to " \
+    "go back to work, I definitely would have stayed longer!", 4],
+  [2, 'Great for affordability, but not very spacious and I could have ' \
+    'used more wall outlets', 7],
+  [5, 'I travel light, so I had enough room. But the remote was hard to ' \
+    'work with', 5],
+  [5, 'The free wine is very helpful after a long days work, and it creates '\
+    'a very social atmosphere', 1],
+  [5, 'Room service is great!', 1],
+  [1, 'Was just the bed I needed to get some good rest. I like firm beds', 6],
+  [1, 'Easy in, easy out, and clean', 5],
+  [1, "It gets so much during light the day, it's awesome", 2],
+  [3, 'spent the weekend here, it was ok, but had a good variety of food ' \
+    'for breakfast', 7]
+]
+
+startup_reviews.each do |review|
+  Review.create(
+    length_of_stay: review[0],
+    comment: review[1],
+    room_type_id: review[2],
+    user_id: 2
+  )
+end
