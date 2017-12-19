@@ -18,6 +18,20 @@ function Review(reviewId, lengthOfStay, roomType, comment, createdAt, username) 
   this.username = username;
 }
 
+Review.prototype.postReview = function () {
+  const formatedCreatedAt = moment(this.createdAt).format(
+    'MM/DD/YYYY' + 'at' + 'h:mm a'
+  );
+
+  $('#js-review').append(HandlebarsTemplates['review_display']({
+    reviewId: this.reviewId,
+    lengthOfStay: this.lengthOfStay,
+    comment: this.comment,
+    username: this.username,
+    createdAt: formatedCreatedAt,
+  }));
+};
+
 function postReviewForm() {
   $('#new_review').submit(function (e) {
     e.preventDefault();
@@ -34,8 +48,8 @@ function postReviewForm() {
         reviewInfo.user.name,
       );
 
-      debugger;
-
+      // debugger;
+      newReview.postReview()
     }).fail(function (review) {
       alert("post didn't saved");
     });
