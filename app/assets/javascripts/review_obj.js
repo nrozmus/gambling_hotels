@@ -25,7 +25,17 @@ function postReviewForm() {
     data = $(this).serialize();
 
     $.post(url, data, function (reviewInfo) {
-      alert('post saved');
+      const newReview = new Review(
+        reviewInfo.id,
+        reviewInfo.length_of_stay,
+        reviewInfo.room_type.name,
+        reviewInfo.comment,
+        reviewInfo.created_at,
+        reviewInfo.user.name,
+      );
+
+      debugger;
+
     }).fail(function (review) {
       alert("post didn't saved");
     });
