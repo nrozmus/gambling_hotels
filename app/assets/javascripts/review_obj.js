@@ -76,6 +76,13 @@ function displayReview() {
     const id = $(this).data('id');
     $.get("/reviews/" + id, function (userReview) {
       $('#review-' + id).html(userReview.comment);
+      $('#review-' + id).after(
+          $('#jsMoreReviewInfo').append(
+          '<li>' +
+            'Lenght of stay: ' + userReview.length_of_stay + ' nights' +
+          '</li>'
+        )
+      );
     });
   });
 }
