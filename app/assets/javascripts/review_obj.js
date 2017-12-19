@@ -9,6 +9,15 @@ function displayReviewForm() {
   }
 }
 
+function Review(reviewId, lengthOfStay, roomType, comment, createdAt, username) {
+  this.reviewId = reviewId;
+  this.lengthOfStay = lengthOfStay;
+  this.roomType = roomType;
+  this.comment = comment;
+  this.createdAt = createdAt;
+  this.username = username;
+}
+
 function postReviewForm() {
   $('#new_review').submit(function (e) {
     e.preventDefault();
