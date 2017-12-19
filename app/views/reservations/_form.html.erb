@@ -1,4 +1,4 @@
-<div class="col-md-5 col-md-offset-2">
+<div class="col-xs-6 col-sm-3 first">
  <%= f.label 'Check in Date' %><br />
  <%= f.date_field :checkin_date,
   value: reservation.checkin_date %><br />
@@ -7,7 +7,7 @@
   value: reservation.checkin_time %><br />
 </div>
 
-<div class="col-md-offset">
+<div class="col-xs-6 col-sm-3">
  <%= f.label 'Check out Date' %><br />
  <%= f.date_field :checkout_date,
   value: reservation.checkout_date %><br />
@@ -16,7 +16,7 @@
   value: reservation.checkout_time %><br />
 </div>
 
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-5 col-md-offset-3">
  <center>
    <%= f.label 'Number of Rooms' %>
    <%= f.number_field :number_of_rooms,
