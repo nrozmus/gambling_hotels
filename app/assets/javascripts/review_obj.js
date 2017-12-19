@@ -23,12 +23,15 @@ Review.prototype.postReview = function () {
     'MM/DD/YYYY' + 'at' + 'h:mm a'
   );
 
+  const nightFormated = (this.lengthOfStay >= 2) ? "nights" : "night"
+
   $('#js-review').append(HandlebarsTemplates['review_display']({
     reviewId: this.reviewId,
     lengthOfStay: this.lengthOfStay,
     comment: this.comment,
     username: this.username,
     createdAt: formatedCreatedAt,
+    night: nightFormated,
   }));
 };
 
