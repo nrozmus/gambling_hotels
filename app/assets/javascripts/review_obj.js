@@ -74,7 +74,7 @@ function displayReview() {
   $('.review-link').on('click', function (e) {
     e.preventDefault();
     const id = $(this).data('id');
-    $.get("/reviews/" + id, function (userReview) {
+    $.get('/reviews/' + id, function (userReview) {
       $('#review-' + id).html(userReview.comment);
       $('#review-' + id).after(
           $('#jsMoreReviewInfo').append(
