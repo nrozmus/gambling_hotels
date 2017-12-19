@@ -1,5 +1,5 @@
-[] Must render at least one index page (index resource - 'list of things') via jQuery and an Active Model Serialization JSON Backend.
-
+[X] Must render at least one index page (index resource - 'list of things') via jQuery and an Active Model Serialization JSON Backend.
+  -Rooms#index uses jQuery to render the selected hotel rooms on the root page
 
 [] Must render at least one show page (show resource - 'one specific thing') via jQuery and an Active Model Serialization JSON Backend.
 
