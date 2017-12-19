@@ -1,5 +1,6 @@
 $(function () {
   postReviewForm();
+  displayReview();
 });
 
 function displayReviewForm() {
@@ -66,5 +67,13 @@ function postReviewForm() {
 
       document.location.reload(true);
     });
+  });
+}
+
+function displayReview() {
+  $('.review-link').on('click', function (e) {
+    e.preventDefault();
+    const id = $(this).data('id');
+    alert('display review #' + id);
   });
 }
