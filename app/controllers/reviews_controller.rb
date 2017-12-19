@@ -4,10 +4,8 @@ class ReviewsController < ApplicationController
   def create
     review = Review.new(review_params)
     if review.save
-      binding.pry
       render json: review
     else
-      binding.pry
       render json: { :errors => review.errors.full_messages }, :status => 422
     end
   end
