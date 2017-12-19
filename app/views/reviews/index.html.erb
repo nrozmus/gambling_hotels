@@ -1,5 +1,27 @@
 <h1>Your Reviews</h1>
 
 <div>
-  <%= @reviews.first.comment %>
+  <% @reviews.each do |review| %>
+    From your stay in
+    <strong>
+      <%= review.room_type.rooms.first.hotel.name %>
+      <%= review.room_type.name %>
+    </strong> room you said:
+    <ul>
+      <li>
+        <div>
+          <a id="review-<%= review.id %>"class="review-link"
+            data-id="<%= review.id %>" href="/reviews/<%= review.id %>">
+            <%= truncate(review.comment) %>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        Posted on: <%= (review.created_at).strftime("%m/%d/%Y at %l:%M %P") %>
+      </li>
+      <%= link_to 'Delete', review_path(review), method: :delete,
+        data: { confirm: 'Are you sure you want to remove this review?' } %>
+    </ul>
+  <% end %>
 </div>
