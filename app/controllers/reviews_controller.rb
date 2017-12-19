@@ -19,6 +19,14 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    review = Review.find(params[:id])
+    room_id = review.room_type.rooms.ids.first #=> num --> w/out arr
+    room_type_id = review.room_type.id
+    review.delete
+    redirect_to room_room_type_path(room_id, room_type_id)
+  end
+
   private
     def review_params
       params.require(:review).permit(
