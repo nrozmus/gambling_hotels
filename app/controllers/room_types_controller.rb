@@ -9,6 +9,8 @@ class RoomTypesController < ApplicationController
 
     @amenities = @room_type.hotel_amenities
 
+    @review = Review.new
+
     @reservation = current_user.reservations.build(
       room_id: params[:room_id],
       checkin_date: Reservation.default_checkin_date,

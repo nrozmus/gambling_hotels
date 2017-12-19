@@ -18,5 +18,19 @@
     <% room_type.rooms.each do |room| %>
       <%= number_to_currency(room.room_rate) %><br />
     <% end %>
+    <h3>
+      <strong>Reviews:</strong>
+    </h3>
+    <div id='js-review-form'>
+      <%= form_for review do |f| %>
+        <%= f.text_field :length_of_stay, placeholder: 'Length Of Stay' %><br />
+        <br />
+        <%= f.text_area :comment, placeholder: 'Review' %>
+        <%= f.hidden_field :room_type_id, value: room_type.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %><br />
+        <%= f.submit value: 'Add' %>
+      <% end %>
+      <br />
+    </div>
   </span>
 </li>
