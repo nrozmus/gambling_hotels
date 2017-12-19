@@ -54,7 +54,14 @@ function postReviewForm() {
 
       newReview.postReview()
     }).fail(function (review) {
-      alert("post didn't saved");
+      const reviewError = $.parseJSON(review.responseText).errors;
+      if (reviewError.length === 2) {
+        alert(`${reviewError[0]} & ${reviewError[1]}`);
+      } else {
+        alert(reviewError);
+      }
+
+      document.location.reload(true);
     });
   });
 }
