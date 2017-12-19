@@ -20,7 +20,7 @@ function Review(reviewId, lengthOfStay, roomType, comment, createdAt, username) 
 
 Review.prototype.postReview = function () {
   const formatedCreatedAt = moment(this.createdAt).format(
-    'MM/DD/YYYY' + 'at' + 'h:mm a'
+    'MM/DD/YYYY [at] h:mm a'
   );
 
   const nightFormated = (this.lengthOfStay >= 2) ? "nights" : "night"
