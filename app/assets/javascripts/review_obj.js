@@ -72,8 +72,10 @@ function postReviewForm() {
 
 function displayReview() {
   $('.review-link').on('click', function (e) {
-    // e.preventDefault();
+    e.preventDefault();
     const id = $(this).data('id');
-    alert('display review #' + id);
+    $.get("/reviews/" + id, function (userReview) {
+      $('#review-' + id).html(userReview.comment);
+    });
   });
 }
