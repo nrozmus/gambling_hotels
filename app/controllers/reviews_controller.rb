@@ -21,10 +21,8 @@ class ReviewsController < ApplicationController
 
   def destroy
     review = Review.find(params[:id])
-    room_id = review.room_type.rooms.ids.first #=> num --> w/out arr
-    room_type_id = review.room_type.id
     review.delete
-    redirect_to room_room_type_path(room_id, room_type_id)
+    redirect_to :back
   end
 
   private
