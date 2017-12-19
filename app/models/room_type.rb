@@ -1,5 +1,6 @@
 class RoomType < ActiveRecord::Base
   has_many :rooms
+  has_many :reviews
 
   def hotel_amenities
     rooms.first.hotel.amenities
