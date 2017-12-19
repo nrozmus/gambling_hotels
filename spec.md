@@ -7,7 +7,11 @@
 [X] The rails API must reveal at least one has-many relationship in the JSON that is then rendered to the page.
   -Home#index, hotel has many rooms
 
-[] Must use your Rails API and a form to create a resource and render the response without a page refresh.
+[X] Must use your Rails API and a form to create a resource and render the response without a page refresh.
+  -Creation of a room type review
 
-
-[] Must translate the JSON responses into Javascript Model Objects. The Model Objects must have at least one method on the prototype.
+[X] Must translate the JSON responses into Javascript Model Objects. The Model Objects must have at least one method on the prototype.
+  -JS Model Object is Review, it has these attributes:
+    reviewId, lengthOfStay, roomType, comment, createdAt, username
+  -Prototype method: Review.prototype.postReview, which post the newly
+    created js object on the page, it mirrors the rails display
