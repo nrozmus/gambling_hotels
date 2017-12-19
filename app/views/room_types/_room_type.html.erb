@@ -21,6 +21,20 @@
     <h3>
       <strong>Reviews:</strong>
     </h3>
+    <ul>
+      <% room_type.reviews.each do |review| %>
+        <strong>Length of Stay: </strong><%= review.length_of_stay %>
+          <%= (review.length_of_stay >= 2) ? "nights" : "night" %><br />
+        <strong>Review: </strong><%= review.comment %><br />
+        <strong>Posted by: </strong><%= review.user.name %> on
+          <%= (review.created_at).strftime("%m/%d/%Y at %l:%M %P") %>
+        <% if current_user && review.user.id == current_user.id %>
+          <%= link_to 'Delete', review_path(review), method: :delete,
+            data: { confirm: 'Are you sure you want to remove this review?' } %>
+        <% end %>
+        <hr>
+      <% end %>
+    </ul>
 
     <ul id="js-review"></ul>
 
