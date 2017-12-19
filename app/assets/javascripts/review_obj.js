@@ -48,7 +48,10 @@ function postReviewForm() {
         reviewInfo.user.name,
       );
 
-      // debugger;
+      $('#review_length_of_stay').val('');
+      $('#review_comment').val('');
+      $('#js-review-form').css('display', 'none');
+
       newReview.postReview()
     }).fail(function (review) {
       alert("post didn't saved");
