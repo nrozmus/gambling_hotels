@@ -1,6 +1,10 @@
 class ReviewsController < ApplicationController
   before_action :require_login
 
+  def index
+    @reviews = current_user.reviews.order(created_at: :desc)
+  end
+
   def create
     review = Review.new(review_params)
     if review.save
