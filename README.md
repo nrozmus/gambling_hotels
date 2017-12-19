@@ -1,7 +1,7 @@
 
 # Easy Reservations w_jQuery
 
-Hello and thanks for trying out my software. This is a mock hotel reservation application that runs on Ruby on Rails with jQuery! It offers rooms from two different hotels at exceptional prices. Once you have registered, either through my site or GitHub, you can reserve as many rooms as you want, as long as that room type is available. To add a more realistic feel for the program, I even give you an 'estimated price' for your stay! Enjoy my new SPEEDY app, you'll never find these rooms at a better price!
+Hello and thanks for trying out my software. This is a mock hotel reservation application that runs on Ruby on Rails with Javascript, now! It still offers ALL those great features of the original Easy Reservations site just with some jQuery and JS upgrades! To highlight some of these improvements now, a user  has the ability to add room reviews, as well as view a hotels rooms immediately, WITHOUT waiting for an new page to load! Gott'a love Javascript! Hopefully these user written reviews can provide a clear picture of what to expect from your desired room! Enjoy my new updated app, you'll never find these rooms at a better price.
 
 ## Installation
 
