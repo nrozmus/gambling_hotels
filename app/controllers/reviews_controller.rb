@@ -5,6 +5,11 @@ class ReviewsController < ApplicationController
     @reviews = current_user.reviews.order(created_at: :desc)
   end
 
+  def show
+    review = Review.find(params[:id])
+    render json: review
+  end
+
   def create
     review = Review.new(review_params)
     if review.save
