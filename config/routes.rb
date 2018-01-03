@@ -7,9 +7,14 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   resources :users
   resources :reservations, only: [:index, :edit, :update, :destroy]
+
   resources :rooms, only: :show do
     resources :room_types, only: :show
     resources :reservations, only: :create
+  end
+
+  resources :hotels do
+    resources :rooms, only: :index
   end
   root 'hotels#index'
 end
