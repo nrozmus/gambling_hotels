@@ -6,7 +6,7 @@ function loadRooms() {
   $('.hotel-link').on('click', function (e) {
     e.preventDefault();
     const id = $(this).data('id');
-    $.get('/rooms/' + id, function (rooms) {
+    $.get('/hotels/' + id + '/rooms', function (rooms) {
       $('#hotel-rooms').empty();
       rooms.forEach(function (room) {
         const name = room.room_type.name;
