@@ -40,7 +40,7 @@ function postReviewForm() {
   $('#new_review').submit(function (e) {
     e.preventDefault();
     const url = this.action;
-    data = $(this).serialize();
+    const data = $(this).serialize();
 
     $.post(url, data, function (reviewInfo) {
       const newReview = new Review(
@@ -65,7 +65,6 @@ function postReviewForm() {
         alert(reviewError);
       }
 
-      document.location.reload(true);
     });
   });
 }
