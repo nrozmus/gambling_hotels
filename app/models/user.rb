@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
   has_secure_password
-  validates_presence_of :addresses, unless:
+  validates_associated :addresses, unless:
     Proc.new { |user| user.provider.present?}
 
   def addresses_attributes=(addresses_attributes)
