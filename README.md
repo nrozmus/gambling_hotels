@@ -5,7 +5,7 @@ Hello and thanks for trying out my software. This is a mock hotel reservation ap
 
 ## Installation
 
-To use this app, just clone this [repo](https://github.com/NickisKnowledge/Easy_Reservations_Rails_Project-).
+To use this app, just clone this [repo](https://github.com/NickisKnowledge/Easy_Reservations_Rails_Project).
 
 And then execute:
 
@@ -27,4 +27,4 @@ The app is available as open source under the terms of the [MIT License](http://
 
 ## Code of Conduct
 
-Everyone interacting in the BPTracker project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/bptraker/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Easy Reservations w_jQuery project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/NickisKnowledge/Easy_Reservations_Rails_Project/blob/master/CODE_OF_CONDUCT.md).
