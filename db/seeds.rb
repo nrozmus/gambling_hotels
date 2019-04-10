@@ -1,37 +1,37 @@
-User.create(name: 'Mallory', password: 'password',
+User.create(name: 'Nick', password: 'password',
   password_confirmation: 'password')
 
-User.create(name: 'Joey', password: 'password',
+User.create(name: 'Kasper', password: 'password',
   password_confirmation: 'password')
 
 Hotel.create(
-  name: 'The Hilton',
-  amenities: 'A continental breakfast buffet is provided. Breakfast is ' \
-    'based on 2 guests. Extra adults guests will be charged for breakfast.',
-  photo: 'hilton_building.jpg'
+  name: 'Jakes 58',
+  amenities: 'Jake’s 58 Hotel & Casino offers five comfortable lodging options to meet every need.' \
+    'All of our 227 hotel rooms provide convenient access to the casino, restaurants, bars & lounges!',
+  photo: 'jakes58_building.jpg'
 )
 Hotel.create(
-  name: 'Best Western',
-  amenities: 'A continental breakfast buffet & High-speed Internet ' \
-    'access ($13.95 for a 24-hour period)',
-  photo: 'bestwest_buliding.jpg'
+  name: 'Mohegan Sun',
+  amenities: 'Earth Tower rooms offer a desk area, amenities tray, refrigerator, marble bathrooms, ' \
+    'video in-room dining menus and ordering with bill review and check-out accessibility; Wi-Fi and in-room iPad.',
+  photo: 'mohegan_buliding.jpg'
 )
 
 roomtype_list = [
-  ['Executive King', '​These signature rooms offer a spacious work desk, ' \
+  ['Deluxe King', '​These signature rooms offer a spacious work desk, ' \
     'a 55-inch HDTV, a mini-fridge and ​plush  king beds. Located on the ' \
     'fifth floor in the main building and the second and third floors in ' \
     'the Tower buildings. These upper floor rooms feature a free evening ' \
     'wine and cheese reception. ​A​n iPod dock, a double vanity sink and an '\
     'illuminated mirror​ are a few of the additional features of the room.​',
-    '​One King Bed', 'hilton_executive_king.jpg'],
-  ['Studio Queen', '​Unwind within these cozy and quiet rooms. Located on ' \
+    '​One King Bed', 'jakes58_deluxe_king.jpg'],
+  ['Deluxe Queen', '​Unwind within these cozy and quiet rooms. Located on ' \
     'the first through the fourth floors in our five-story main building, ' \
     'they are beautifully decorated with residential style furnishings, ' \
     'white pillow-top bedding, walnut wood finishes and neutral accents. ' \
     'An ergonomic work area with a desk and seating area are also featured ' \
-    'in these rooms.', 'One Queen Bed', 'hilton_studio_queen.jpg'],
-  ['One Bedroom Suite', 'These luxury Suites at The Hilton hotel have a ' \
+    'in these rooms.', 'One Queen Bed', 'mohegan_deluxe_queen.jpg'],
+  ['One Bedroom Suite', 'These luxury Suites at Mohegan Sun have a ' \
     'spacious parlor, bedroom and marble bathroom with glass-enclosed ' \
     'showers and tubs. The bedroom and living room are separated by a door ' \
     'for privacy. Each of these modern suites are unique in decor, layout ' \
@@ -42,7 +42,7 @@ roomtype_list = [
     'a Executive King Room to make a 2 bedroom suite, based on availability. ' \
     'These suites are located in the Tower buildings on the third and ' \
     'fourth floors.', 'One King bed and one Full-size sofa bed',
-    'hilton_1_bedroom_suite.jpg'],
+    'mohegan_1_bedroom_suite.jpg'],
   ['Two Bedroom Suite', 'The Deluxe suites offer spectacular panoramic views ' \
     'of the city. The living room is separated from one bedroom by double ' \
     'doors, the other is in its own private section. These spacious suites' \
@@ -54,29 +54,29 @@ roomtype_list = [
     'separate bath and shower, sofa bed in the living room, flat-panel TVs, ' \
     'pillow top beds and Nespresso coffee machines. Certain suites can ' \
     'connect to One Bedroom suites based on availability.', 'One King bed, ' \
-    'one Queen bed, and a Queen-zise sofa bed', 'hilton_2_bedroom_suite.jpg'],
+    'one Queen bed, and a Queen-zise sofa bed', 'mohegan_2_bedroom_suite.jpg'],
   ['Classic King', 'The Classic King rooms offer plenty of space to relax ' \
     'and rest after a long day. Specially-designed with a spacious work ' \
     'area, comfy King-sized bed and spacious bathrooms, this is a terrific ' \
     'option for the business professionals. These rooms are mainly located ' \
-    'on the second floor.', 'One King bed', 'bestwest_deluxe_king.jpg'],
-  ['Standard Queen', 'Classic, crisp and clean. These rooms feature plush ' \
+    'on the second floor.', 'One King bed', 'mohegan_deluxe_king.jpg'],
+  ['Corner Suite', 'Classic, crisp and clean. These rooms feature plush ' \
     'furniture, polished wooden surfaces, leather accents and ample natural ' \
     'lighting. The Standard Queen rooms offer moderate accommodations for a ' \
     'maximum of two guests. Located on the first and second floors.',
-    'One Queen bed', 'bestwest_standard_queen.jpg'],
+    'One Queen bed', 'jakes58_corner_suite.jpg'],
   ['Double Queen', 'Spacious for up to four. Double Queen rooms offer ' \
     'accommodation for up to four guests. For families or small parties, ' \
     'everyone will enjoy ample space. These are available with two full or ' \
     'two queen-sized beds. Located on the first and second floors. Select ' \
     'rooms are available with a bathtub and shower, however all rooms ' \
-    'feature a shower.', 'Two Queen bed', 'bestwest_double_queen.jpg'],
-  ['Extended-stay Suite', 'Offering the greatest space and luxury of any ' \
-    'of our rooms, the Extended-stay Suite is a one bedroom suite that ' \
+    'feature a shower.', 'Two Queen bed', 'mohegan_double_queen.jpg'],
+  ['Acessible Suite', 'Offering the greatest space and utlity of any ' \
+    'of our rooms, the Acessible Suite is a one bedroom suite that ' \
     'comfortably hosts up to four guests. With snug King or Queen beds and ' \
-    'spacious bathrooms, this is a terrific option for families or couples. ' \
-    'These rooms are located only on the second floor.', 'One King or Queen ' \
-    'bed and one Full-size sofa bed', 'bestwest_extended_stay_suite.jpg']
+    'spacious bathrooms, this is a terrific option for families with needs. ' \
+    'These rooms are located only on the first floor for your convenience.', 'One King or Queen ' \
+    'bed and one Full-size sofa bed', 'jakes58_accessible_room.jpg']
 ]
 
 roomtype_list.each do |room_type|
@@ -109,8 +109,9 @@ room_list.each do |room|
 end
 
 setup_addresses = [
-  ['852 E Dr', '', 'Winchester', 'MN',	96541, 'Home', 1],
-  ['123 Orchard', 'apt 14', 'Montana','MN', 6612, 'Home', 2]
+  ['852 E Dr', 'Uncasville', 'CT',	16382,   'Home', 3],
+  ['11 Broadway #260', 'Learn.co', 'New York',	'NY',	10004,	'Work', 1],
+  ['3635 Express Drive N', 'Islandia','NY', 11749, 'Home', 2]
 ]
 
 setup_addresses.each do |address|

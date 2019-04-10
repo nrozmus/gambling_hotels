@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116022900) do
+ActiveRecord::Schema.define(version: 20190409001623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,27 +30,6 @@ ActiveRecord::Schema.define(version: 20180116022900) do
 
   add_index "addresses", ["user_id"], name: "index_addresses_on_user_id", using: :btree
 
-  create_table "ar_internal_metadata", primary_key: "key", force: :cascade do |t|
-    t.string   "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "dinners", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "directions", force: :cascade do |t|
-    t.string   "step"
-    t.integer  "dinner_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "directions", ["dinner_id"], name: "index_directions_on_dinner_id", using: :btree
-
   create_table "hotels", force: :cascade do |t|
     t.string   "name"
     t.string   "amenities"
@@ -58,25 +37,6 @@ ActiveRecord::Schema.define(version: 20180116022900) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "images", force: :cascade do |t|
-    t.string   "name"
-    t.string   "url"
-    t.integer  "dinner_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "images", ["dinner_id"], name: "index_images_on_dinner_id", using: :btree
-
-  create_table "ingredients", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "dinner_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "ingredients", ["dinner_id"], name: "index_ingredients_on_dinner_id", using: :btree
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "room_id"
@@ -135,9 +95,6 @@ ActiveRecord::Schema.define(version: 20180116022900) do
   end
 
   add_foreign_key "addresses", "users"
-  add_foreign_key "directions", "dinners"
-  add_foreign_key "images", "dinners"
-  add_foreign_key "ingredients", "dinners"
   add_foreign_key "reservations", "rooms"
   add_foreign_key "reservations", "users"
   add_foreign_key "reviews", "room_types"

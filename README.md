@@ -1,30 +1,24 @@
+Gambling Hotels
 
-# Easy Reservations w_jQuery
+Welcome to Gambling Hotels! Inspiration for this came from my local interests in blackjack, with a bet always made to my friends that if we win big, we will book a hotel for the night and enjoy ourselves for another day. Although that day has not come yet, this is a mock hotel reservation app that runs on Ruby on Rails. It offers rooms from two different and popular casino hotels at current prices. Once you have registered, either through my site or GitHub, you can reserve as many rooms as you want, as long as that room type is available.
 
-Hello and thanks for trying out my software. This is a mock hotel reservation application that runs on Ruby on Rails with JavaScript, now! It still offers ALL those great features of the original Easy Reservations site just with some jQuery and JS upgrades! To highlight some of these improvements now, a user  has the ability to add room reviews, as well as view a hotels rooms immediately, WITHOUT waiting for an new page to load! Gott'a love JavaScript! Hopefully these user written reviews can provide a clear picture of what to expect from your desired room! Enjoy my new updated app, you'll never find these rooms at a better price. Here's a live [link](https://easy-reservations-w-jquery.herokuapp.com/).
-
-## Installation
-
-To use this app, just clone this [repo](https://github.com/NickisKnowledge/Easy_Reservations_Rails_Project).
+Installation
+To use this app, just clone this repo.
 
 And then execute:
 
-    $ bundle
+$ bundle
 
-## Usage
+Usage
+Step 1) Run: rake db:migrate after cloning the repository.
+Step 2) Run: rake db:seed
+Step 3) Run: rails s
 
-Step 1) Run: `rake db:migrate` after cloning the repository. <br />
-Step 2) Run: `rake db:seed` <br />
-Step 3) Run: `rails s`
+Contributing
+Bug reports and pull requests are welcome on GitHub. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-## Contributing
+License
+The app is available as open source under the terms of the MIT License.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/NickisKnowledge/Easy_Reservations_Rails_Project. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The app is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Easy Reservations w_jQuery project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/NickisKnowledge/Easy_Reservations_Rails_Project/blob/master/CODE_OF_CONDUCT.md).
+Code of Conduct
+Everyone interacting in the Gambling Hotels' project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
